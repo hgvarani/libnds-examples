@@ -1,4 +1,4 @@
-#SpriteTest
+# SpriteTest
 
 This example consist of:
 
