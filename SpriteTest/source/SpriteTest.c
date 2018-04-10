@@ -41,26 +41,20 @@ int main(int argc, char** argv){
 		scanKeys();
 		int key = keysHeld();
 
-		switch(key) {
-			case KEY_UP:
-				spriteKeyDown.y -= speed;
-				break;
-			case KEY_DOWN:
-				spriteKeyDown.y += speed;
-				break;
-			case KEY_RIGHT:
-				spriteKeyDown.x += speed;
-				break; 
-			case KEY_LEFT:
+		if(key & KEY_UP)
+			spriteKeyDown.y -= speed;
+		if(key & KEY_DOWN)
+			spriteKeyDown.y += speed;
+		if(key & KEY_RIGHT)
+			spriteKeyDown.x += speed;
+		if(key & KEY_LEFT)
 				spriteKeyDown.x -= speed;
-				break;
-			case KEY_TOUCH:
-				touchRead(&touch);
+		if(key & KEY_TOUCH) {
+			touchRead(&touch);
 				spriteTouchUp.x = 255 - touch.px;
 				spriteTouchUp.y = 190 - touch.py;
 				spriteTouchDown.x = touch.px;
 				spriteTouchDown.y = touch.py;
-				break;
 		}
 
 		createSquare(spriteTouchUp, &oamMain, 1);
