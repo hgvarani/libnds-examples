@@ -4,7 +4,8 @@ I'd like to test some game development using C/C++ languages and then I tried so
 
 You can try it first setting up your environment using [this link]. If you have interest, [John Riselvato's NDS Homebrew Development Resource] has a lot of examples to use another DS features. 
 
-After it's done, you can compile your own `.nds` file and test on an emulator or real hardware (I'm also including it)
+After it's done, you can compile your own `.nds` file and test on an emulator or real hardware.
+I'm also including the `.nds` file itself
 
 ```sh
 $ git clone https://github.com/hgvarani/libnds-examples.git $DEVKITPRO/examples/libnds-examples
